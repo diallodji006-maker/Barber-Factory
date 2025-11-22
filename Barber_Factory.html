@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barber Factory</title>
+<style>
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Arial', sans-serif; }
+body { background-color: #f8f8f8; color: #333; line-height: 1.6; }
+
+header {
+    background: linear-gradient(90deg, #000, #333);
+    color: #FFD700;
+    text-align: center;
+    padding: 40px 20px;
+}
+header img { width: 120px; height: auto; margin-bottom: 15px; }
+header h1 { font-size: 2.8em; margin-bottom: 5px; }
+header p { font-size: 1.1em; }
+
+nav { background-color: #111; text-align: center; }
+nav a { color: #FFD700; padding: 15px 25px; display: inline-block; text-decoration: none; font-weight: bold; }
+nav a:hover { background-color: #333; border-radius: 5px; }
+
+section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+section h2 { text-align: center; margin-bottom: 30px; color: #111; font-size: 2em; }
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.service-item:hover { transform: translateY(-5px); }
+.service-item img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+.service-item h3 { margin-bottom: 10px; color: #000; }
+.service-item p { color: #555; }
+
+.rendezvous {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: auto;
+}
+.rendezvous input, .rendezvous select, .rendezvous textarea {
+    width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;
+}
+.rendezvous button, .whatsapp-btn {
+    width: 100%; padding: 15px; border-radius: 5px; font-size: 1em; cursor: pointer;
+    text-align: center; text-decoration: none; display: inline-block;
+}
+.rendezvous button { background-color: #000; color: #FFD700; border: none; }
+.rendezvous button:hover { background-color: #333; }
+.whatsapp-btn { background-color: #25D366; color: white; margin-top: 10px; font-weight: bold; }
+.whatsapp-btn:hover { background-color: #1ebe57; }
+
+.contact {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.contact p { margin: 10px 0; font-size: 1.1em; }
+
+footer { text-align: center; padding: 20px; background-color: #111; color: #FFD700; margin-top: 50px; }
+
+@media(max-width: 600px){
+    header h1 { font-size: 2.2em; }
+    section { padding: 30px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://via.placeholder.com/120x120.png?text=Logo" alt="Barber Factory Logo">
+    <h1>Barber Factory</h1>
+    <p>Cité Alioune Sow Golf | Téléphone: +221708138305</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#rendezvous">Rendez-vous</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Coiffeur" alt="Coiffeur Homme/Enfant">
+            <h3>Coiffeur Homme / Enfant</h3>
+            <p>Des coupes stylées pour tous les âges.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Tresse+Dread" alt="Tresse / Dread Locks">
+            <h3>Tresse / Dread Locks</h3>
+            <p>Stylisez vos cheveux avec nos experts.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Shampoing" alt="Shampoing">
+            <h3>Shampoing</h3>
+            <p>Des soins capillaires pour cheveux sains.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Perruque" alt="Soins Perruque">
+            <h3>Soins Perruque</h3>
+            <p>Entretien et pose de perruques professionnelles.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Pedicure+Manucure" alt="Pédicure / Manucure">
+            <h3>Pédicure / Manucure</h3>
+            <p>Beauté et soin pour vos mains et pieds.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300x150.png?text=Makeup" alt="Make-up">
+            <h3>Make-up</h3>
+            <p>Maquillage professionnel pour toutes occasions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="rendezvous">
+    <h2>Prendre Rendez-vous</h2>
+    <div class="rendezvous">
+        <form action="mailto:barberfactory@example.com" method="post" enctype="text/plain">
+            <input type="text" name="nom" placeholder="Votre Nom" required>
+            <input type="tel" name="telephone" placeholder="Votre Téléphone" required>
+            <select name="service" required>
+                <option value="">Choisissez un service</option>
+                <option value="Coiffeur Homme/Enfant">Coiffeur Homme/Enfant</option>
+                <option value="Tresse/Dread Locks">Tresse/Dread Locks</option>
+                <option value="Shampoing">Shampoing</option>
+                <option value="Soins Perruque">Soins Perruque</option>
+                <option value="Pedicure/Manucure">Pédicure/Manucure</option>
+                <option value="Make-up">Make-up</option>
+            </select>
+            <textarea name="message" placeholder="Message (optionnel)"></textarea>
+            <button type="submit">Envoyer par Email</button>
+        </form>
+        <a class="whatsapp-btn" href="https://wa.me/221708138305?text=Bonjour%20Barber%20Factory,%20je%20veux%20prendre%20rendez-vous" target="_blank">
+            📱 Prendre Rendez-vous sur WhatsApp
+        </a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+        <p>📍 Adresse : Cité Alioune Sow Golf</p>
+        <p>📞 Téléphone : +221708138305</p>
+        <p>💬 WhatsApp disponible</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Barber Factory | Tous droits réservés
+</footer>
+
+</body>
+</html>
